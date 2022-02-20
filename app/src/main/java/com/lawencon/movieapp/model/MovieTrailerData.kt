@@ -2,7 +2,7 @@ package com.lawencon.movieapp.model
 
 import com.google.gson.annotations.SerializedName
 
-class MovieTrailerData(@SerializedName("iso_639_1") var iso_639_1: String? = "",
+data class MovieTrailerData(@SerializedName("iso_639_1") var iso_639_1: String? = "",
                        @SerializedName("iso_3166_1") var iso_3166_1: String? = "",
                        @SerializedName("name") var name: String? = "",
                        @SerializedName("key") var key: String? = "",

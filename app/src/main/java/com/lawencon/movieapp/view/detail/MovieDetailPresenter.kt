@@ -19,4 +19,17 @@ class MovieDetailPresenter @Inject constructor(val movieEntity: MovieEntity): Ba
            view?.errorScreen(it.localizedMessage)
         }, {}))
     }
+
+    override fun execMovieReview(movieId: Int) {
+        addSubscription(movieEntity.getMovieReview(movieId).uiSubscribe({
+            when(it.code()) {
+                NetworkCode.CODE_OK -> view?.getMovieReview(it.body())
+                else -> {
+                    view?.errorScreen("Unable to Load Data")
+                }
+            }
+        }, {
+           view?.errorScreen(it.localizedMessage)
+        }, {}))
+    }
 }

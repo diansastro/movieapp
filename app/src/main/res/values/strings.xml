@@ -7,4 +7,6 @@
     <string name="rating">Ratings: %1$s</string>
     <string name="vote">Vote: %1$s</string>
     <string name="release">Released: %1$s</string>
+    <string name="review">User Review</string>
+    <string name="review_by">By: %1$s</string>
 </resources>

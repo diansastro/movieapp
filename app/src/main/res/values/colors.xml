@@ -10,4 +10,7 @@
     <color name="corious_blue">#3888C6</color>
     <color name="snow">#FFFFFF</color>
     <color name="white_smoke">#F0F0F0</color>
+    <color name="dark_blue">#0d253f</color>
+    <color name="light_blue">#01b4e4</color>
+    <color name="light_green">#90cea1</color>
 </resources>
