@@ -1,8 +1,6 @@
 package com.lawencon.movieapp.view.genre
 
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.GridLayoutManager
 import com.lawencon.movieapp.R
 import com.lawencon.movieapp.base.BaseMvpActivity
 import com.lawencon.movieapp.data.response.GenreListResponse
@@ -60,13 +58,18 @@ open class GenreListActivity: BaseMvpActivity<GenreListPresenter>(), GenreListCo
             notifyDataSetChanged()
         }
 
-        rvGenreList.apply {
-            adapter = gAdapter
-            layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
-            isNestedScrollingEnabled = false
+        val lm = GridLayoutManager(this, 2)
+        lm.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
+            override fun getSpanSize(position: Int): Int {
+                return if (position == 0) 2 else 1
+            }
         }
 
-        rvGenreList.addItemDecoration(DividerItemDecoration(this, LinearLayoutManager.VERTICAL))
+        rvGenreList.apply {
+            adapter = gAdapter
+            rvGenreList.layoutManager = lm
+            isNestedScrollingEnabled = false
+        }
         dismissLoading()
     }
 }

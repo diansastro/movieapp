@@ -10,6 +10,7 @@ import com.lawencon.movieapp.data.response.MovieByGenreResponse
 import com.lawencon.movieapp.model.GenreData
 import com.lawencon.movieapp.objects.Params
 import com.lawencon.movieapp.view.adapter.MovieByGenreAdapter
+import com.lawencon.movieapp.view.detail.MovieDetailActivity
 import dagger.android.AndroidInjection
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
@@ -75,7 +76,7 @@ open class MovieListActivity:BaseMvpActivity<MovieListPresenter>(), HasAndroidIn
         movieAdapter.apply { 
             setOnItemClickListener { adapter, view, position ->
                 mData[position].id?.let {
-
+                    MovieDetailActivity.newInstance(this@MovieListActivity, it)
                 }
             }
             notifyDataSetChanged()
