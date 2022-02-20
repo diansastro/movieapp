@@ -11,7 +11,6 @@ class ReviewAdapter(var list: List<MovieReviewData>): BaseQuickAdapter<MovieRevi
         helper?.let { h ->
             item?.let { i ->
                 h.itemView.tvAuthor.text = mContext.getString(R.string.review_by, i.author)
-                h.itemView.tvReviewDate.text = i.updated_at
                 h.itemView.tvReviewContent.text = i.content
             }
         }

@@ -16,19 +16,6 @@
         android:layout_marginStart="@dimen/_8sdp"
         android:textColor="@color/dark_blue"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tvReviewDate"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvReviewDate"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/_8sdp"
-        android:textSize="@dimen/_10ssp"
-        android:textStyle="normal"
-        android:textColor="@color/dark_blue"
-        android:gravity="end"
-        app:layout_constraintStart_toEndOf="@+id/tvAuthor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,6 +30,6 @@
         android:drawablePadding="@dimen/_2sdp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvReviewDate"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvAuthor"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
