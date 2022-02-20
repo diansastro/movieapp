@@ -21,6 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.genre.GenreListActivity"/>
+        <activity android:name=".view.movie.MovieListActivity"/>
     </application>
 
 </manifest>

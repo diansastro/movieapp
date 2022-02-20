@@ -8,6 +8,7 @@ import com.lawencon.movieapp.base.BaseMvpActivity
 import com.lawencon.movieapp.data.response.GenreListResponse
 import com.lawencon.movieapp.model.GenreListData
 import com.lawencon.movieapp.view.adapter.GenreListAdapter
+import com.lawencon.movieapp.view.movie.MovieListActivity
 import dagger.android.AndroidInjection
 import dagger.android.DispatchingAndroidInjector
 import kotlinx.android.synthetic.main.activity_genre_list.*
@@ -53,7 +54,7 @@ open class GenreListActivity: BaseMvpActivity<GenreListPresenter>(), GenreListCo
         gAdapter.apply {
             setOnItemClickListener { adapter, view, position ->
                 gData[position].id?.let {
-
+                    MovieListActivity.newInstance(this@GenreListActivity, it)
                 }
             }
             notifyDataSetChanged()

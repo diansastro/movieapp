@@ -91,4 +91,5 @@ dependencies {
     //UI
     implementation 'com.github.ybq:Android-SpinKit:1.4.0'
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.45'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
 }
