@@ -1,5 +1,6 @@
 package com.lawencon.movieapp.di.builder
 
+import com.lawencon.movieapp.view.detail.MovieDetailActivity
 import com.lawencon.movieapp.view.genre.GenreListActivity
 import com.lawencon.movieapp.view.movie.MovieListActivity
 import com.lawencon.movieapp.view.splash.SplashActivity
@@ -17,5 +18,8 @@ abstract class ActivityBuilder {
 
     @ContributesAndroidInjector
     abstract fun bindMovieListActivity(): MovieListActivity
+
+    @ContributesAndroidInjector
+    abstract fun bindDetailMovieActivity(): MovieDetailActivity
 
 }

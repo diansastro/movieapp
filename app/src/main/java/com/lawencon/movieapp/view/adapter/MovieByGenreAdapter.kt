@@ -18,8 +18,8 @@ class MovieByGenreAdapter(var list: List<GenreData>): BaseQuickAdapter<GenreData
 
                 h.itemView.title.text = i.title
                 h.itemView.release.text = mContext.getString(R.string.release, i.release_date)
-                h.itemView.vote.text = mContext.getString(R.string.vote, i.vote_average)
-                h.itemView.rating.text = mContext.getString(R.string.rating, i.vote_count.toString())
+                h.itemView.vote.text = mContext.getString(R.string.vote, i.vote_count.toString())
+                h.itemView.rating.text = mContext.getString(R.string.rating, i.vote_average)
             }
         }
     }

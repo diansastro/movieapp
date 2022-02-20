@@ -60,6 +60,8 @@ dependencies {
     implementation 'com.google.android.material:material:1.1.0-alpha05'
     implementation 'androidx.multidex:multidex:2.0.1'
 
+    implementtation files('libs/YouTubeAndroidPlayerApi.jar')
+
     implementation "org.jetbrains.anko:anko-commons:$anko_version"
     // Design
     implementation "org.jetbrains.anko:anko-design:$anko_version"
