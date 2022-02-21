@@ -56,7 +56,6 @@ open class MovieDetailActivity: BaseMvpActivity<MovieDetailPresenter>(), MovieDe
         initBundle()
         presenter.execMovieTrailer(movieId)
         presenter.execMovieReview(movieId)
-        initView()
     }
 
     override fun getLayout(): Int = R .layout.activity_movie_detail
@@ -83,9 +82,10 @@ open class MovieDetailActivity: BaseMvpActivity<MovieDetailPresenter>(), MovieDe
         }
 
         movieTrailerResponse.results.forEach {
-            videoUrl = it.key
+            it.let { videoUrl = it.key }
         }
 
+        initView()
         dismissLoading()
     }
 
